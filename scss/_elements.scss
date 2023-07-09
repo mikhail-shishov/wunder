@@ -1,0 +1,17 @@
+.hero {
+    &__section {
+        padding: 100px 0;
+    }
+}
+
+.feature {
+  &__section {
+    margin: 100px 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+  }
+}

@@ -1,14 +1,55 @@
 .hero {
   &__section {
-    padding: 100px 0;
+    padding: 230px 0;
     background-image: url(../img/hero-light.jpg);
     background-size: cover;
     background-position: center;
 
+    @media (max-width: 992px) {
+      padding: 100px 0;
+    }
+
+    @media (max-width: 576px) {
+      background-image: url(../img/hero-light-mob.jpg);
+      padding: 400px 0 60px;
+    }
+
+    .col {
+      &-6 {
+        @media (max-width: 576px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+
+    .h1 {
+      @media (max-width: 576px) {
+        margin-bottom: 0;
+      }
+    }
+
     &--dark {
       background-image: url(../img/hero-dark.jpg);
 
-      * {
+      @media (max-width: 576px) {
+        background-image: url(../img/hero-dark-mob.jpg);
+        padding: 60px 0 160px;
+      }
+
+      .col {
+        &-6 {
+          @media (max-width: 576px) {
+            align-items: flex-start;
+            text-align: left;
+            max-width: 60%;
+          }
+        }
+      }
+
+      *:not(.highlight) {
         color: white;
       }
     }

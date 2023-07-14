@@ -4,6 +4,23 @@
     background-image: url(../img/hero-light.jpg);
     background-size: cover;
     background-position: center;
+    min-height: 100vh;
+
+    @media (max-width: 576px) {
+      min-height: unset;
+    }
+
+    .row {
+      position: relative;
+      height: calc(100vh - 460px);
+
+      @media (max-width: 992px) {
+        height: calc(100vh - 200px);
+      }
+      @media (max-width: 576px) {
+        height: unset;
+      }
+    }
 
     @media (max-width: 992px) {
       padding: 100px 0;
@@ -11,16 +28,24 @@
 
     @media (max-width: 576px) {
       background-image: url(../img/hero-light-mob.jpg);
-      padding: 400px 0 60px;
+      padding: 440px 0 60px;
     }
 
     .col {
       &-6 {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
         @media (max-width: 576px) {
           display: flex;
           flex-direction: column;
           align-items: center;
           text-align: center;
+          position: static;
+          transform: none;
+          width: 100%;
         }
       }
     }
@@ -33,10 +58,13 @@
 
     &--dark {
       background-image: url(../img/hero-dark.jpg);
+      background-position: 70% 0;
 
       @media (max-width: 576px) {
         background-image: url(../img/hero-dark-mob.jpg);
         padding: 60px 0 160px;
+        min-height: 500px;
+        background-position: center;
       }
 
       .col {
@@ -59,6 +87,12 @@
 .feature {
   &__section {
     margin: 100px 0;
+
+    .h2.center {
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__grid {
@@ -111,6 +145,14 @@
 
   &__content {
     max-width: 852px;
+
+    .text {
+      font-size: 20px;
+
+      @media (max-width: 576px) {
+        font-size: 16px;
+      }
+    }
   }
 
   &__img {
@@ -153,6 +195,12 @@
       max-width: unset;
       width: auto;
       transform: translate(-50%, -50%);
+
+      @media (max-width: 576px) {
+        max-height: 160%;
+        min-height: 100%;
+        height: auto;
+      }
     }
 
     @media (max-width: 576px) {
@@ -163,9 +211,9 @@
 
   &__content {
     @media (max-width: 576px) {
-      .h2 {
+      .h3,
+      .text {
         max-width: 80%;
-        font-size: 18px;
       }
     }
   }
@@ -206,7 +254,6 @@
 
     .button {
       white-space: nowrap;
-      padding: 10px 20px;
 
       @media (max-width: 576px) {
         font-size: 16px;

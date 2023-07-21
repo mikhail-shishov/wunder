@@ -9,15 +9,3 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
-
-
-// for test purposes
-section, article {
-  border-bottom: 3px solid black;
-  padding-bottom: 80px;
-
-  &:last-of-type {
-    border-bottom: 0;
-  }
-}

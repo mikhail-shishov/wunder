@@ -1,7 +1,6 @@
 .hero {
   &__section {
     padding: 230px 0;
-    background-image: url(../img/hero-light.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -27,7 +26,6 @@
     }
 
     @media (max-width: 576px) {
-      background-image: url(../img/hero-light-mob.jpg);
       padding: 440px 0 60px;
     }
 
@@ -83,7 +81,6 @@
       }
 
       @media (max-width: 576px) {
-        background-image: url(../img/hero-dark-mob.jpg);
         padding: 60px 0 160px;
         min-height: 500px;
         background-position: center;

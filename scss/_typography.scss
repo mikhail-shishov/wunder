@@ -96,7 +96,7 @@
   display: inline-block;
   text-decoration: none;
   border-radius: 5px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   text-align: center;
   transition: opacity 0.3s;
   cursor: default;
@@ -113,6 +113,7 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
     margin: 30px 0;
 
     &:last-of-type {
@@ -142,10 +143,13 @@
       color: $black;
     }
   }
+  
+  &__small {
+    padding: 5px 20px;
+  }
 }
 
 a.button {
-  padding: 10px 20px;
   cursor: pointer;
 
   &:hover {
